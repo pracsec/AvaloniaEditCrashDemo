@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaloniaEditCrashDemo.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:avedit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaEditCrashDemo.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaloniaEditCrashDemo">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<avedit:TextEditor Name="DocumentationEditor"
+		Background="Black"
+		FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+		Foreground="#D4D4D4"
+		HorizontalScrollBarVisibility="Auto"
+		VerticalScrollBarVisibility="Visible"
+		FontWeight="Light"
+		FontSize="10"
+		WordWrap="True"
+		Document="{Binding Documentation}"/>
+</Window>
